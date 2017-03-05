@@ -12,24 +12,24 @@ Installation and Usage
 
 3. Download the [certbot-route53.sh][] script.
 
-    mkdir my-certificates
-    cd my-certificates
-    curl -O certbot-route53.sh
+        mkdir my-certificates
+        cd my-certificates
+        curl -O certbot-route53.sh
 
 4. Run the script with your (comma-separated) domain(s) and email address:
 
-    sh certbot-route53.sh \
-      --agree-tos \
-      --manual-public-ip-logging-ok \
-      --domains mydomain.biz,www.mydomain.biz \
-      --email $(git config user.email)
+        sh certbot-route53.sh \
+          --agree-tos \
+          --manual-public-ip-logging-ok \
+          --domains mydomain.biz,www.mydomain.biz \
+          --email $(git config user.email)
 
 5. Wait patiently (usually about two minutes) while, for each domain requested:
 
-  - Certbot asks Let's Encrypt for a DNS validation challenge string,
-  - AWS CLI asks Route53 to create a domain TXT record with the challenge value,
-  - Let's Encrypt validates the TXT record and returns a certificate, and finally
-  - AWS CLI asks Route53 to delete the TXT record.
+    - Certbot asks Let's Encrypt for a DNS validation challenge string,
+    - AWS CLI asks Route53 to create a domain TXT record with the challenge value,
+    - Let's Encrypt validates the TXT record and returns a certificate, and finally
+    - AWS CLI asks Route53 to delete the TXT record.
 
 6. Find your new certificate(s) in the `letsencrypt/live` directory.
 
