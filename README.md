@@ -34,6 +34,7 @@ Installation and Usage
 
 6. Find your new certificate(s) in the `letsencrypt/live` directory.
 
+![terminal](https://cloud.githubusercontent.com/assets/4433/23584470/9306b8ac-0130-11e7-9ffc-ef7d91971620.png)
 
 [AWS Route53]: https://aws.amazon.com/route53
 [Let's Encrypt]: https://letsencrypt.org
