@@ -19,7 +19,7 @@ Installation and Usage
     chmod a+x certbot-route53.sh
     ```
 
-5. 4. Run the script with your (comma-separated) domain(s) and email address:
+4. Run the script with your (comma-separated) domain(s) and email address:
 
     ```sh
     sh certbot-route53.sh \
