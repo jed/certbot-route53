@@ -14,14 +14,15 @@ Installation and Usage
 
         mkdir my-certificates
         cd my-certificates
-        curl -O certbot-route53.sh
+        curl -sL https://git.io/vylLx -o certbot-route53.sh
+        chmod a+x certbot-route53.sh
 
 4. Run the script with your (comma-separated) domain(s) and email address:
 
         sh certbot-route53.sh \
           --agree-tos \
           --manual-public-ip-logging-ok \
-          --domains mydomain.biz,www.mydomain.biz \
+          --domains jed.is,www.jed.is \
           --email $(git config user.email)
 
 5. Wait patiently (usually about two minutes) while, for each domain requested:
@@ -33,11 +34,12 @@ Installation and Usage
 
 6. Find your new certificate(s) in the `letsencrypt/live` directory.
 
+
 [AWS Route53]: https://aws.amazon.com/route53
 [Let's Encrypt]: https://letsencrypt.org
 [Certbot]: https://certbot.eff.org
 [AWS CLI]: https://aws.amazon.com/cli/
 [Homebrew]: https://brew.sh/
 [pip]: https://pypi.python.org/pypi/pip
-[certbot-route53.sh]: https://cdn.rawgit.com/jed/certbot-route53/393a981f/certbot-route53.sh
+[certbot-route53.sh]: https://git.io/vylLx
 [Configure the AWS CLI]: http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
