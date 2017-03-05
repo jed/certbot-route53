@@ -12,18 +12,22 @@ Installation and Usage
 
 3. Download the [certbot-route53.sh][] script.
 
-        mkdir my-certificates
-        cd my-certificates
-        curl -sL https://git.io/vylLx -o certbot-route53.sh
-        chmod a+x certbot-route53.sh
+    ```sh
+    mkdir my-certificates
+    cd my-certificates
+    curl -sL https://git.io/vylLx -o certbot-route53.sh
+    chmod a+x certbot-route53.sh
+    ```
 
-4. Run the script with your (comma-separated) domain(s) and email address:
+5. 4. Run the script with your (comma-separated) domain(s) and email address:
 
-        sh certbot-route53.sh \
-          --agree-tos \
-          --manual-public-ip-logging-ok \
-          --domains jed.is,www.jed.is \
-          --email $(git config user.email)
+    ```sh
+    sh certbot-route53.sh \
+      --agree-tos \
+      --manual-public-ip-logging-ok \
+      --domains jed.is,www.jed.is \
+      --email $(git config user.email)
+    ```
 
 5. Wait patiently (usually about two minutes) while, for each domain requested:
 
@@ -44,3 +48,4 @@ Installation and Usage
 [pip]: https://pypi.python.org/pypi/pip
 [certbot-route53.sh]: https://git.io/vylLx
 [Configure the AWS CLI]: http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
+
