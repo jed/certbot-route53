@@ -26,10 +26,10 @@ Installation and Usage
 
 5. Wait patiently (usually about two minutes) while, for each domain requested:
 
-- Certbot asks Let's Encrypt for a DNS validation challenge string,
-- AWS CLI asks Route53 to create a domain TXT record with the challenge value,
-- Let's Encrypt validates the TXT record and returns a certificate, and finally
-- AWS CLI asks Route53 to delete the TXT record.
+  - Certbot asks Let's Encrypt for a DNS validation challenge string,
+  - AWS CLI asks Route53 to create a domain TXT record with the challenge value,
+  - Let's Encrypt validates the TXT record and returns a certificate, and finally
+  - AWS CLI asks Route53 to delete the TXT record.
 
 6. Find your new certificate(s) in the `letsencrypt/live` directory.
 
@@ -39,5 +39,5 @@ Installation and Usage
 [AWS CLI]: https://aws.amazon.com/cli/
 [Homebrew]: https://brew.sh/
 [pip]: https://pypi.python.org/pypi/pip
-[certbot-route53.sh]: #
+[certbot-route53.sh]: https://cdn.rawgit.com/jed/certbot-route53/393a981f/certbot-route53.sh
 [Configure the AWS CLI]: http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
