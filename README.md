@@ -6,7 +6,7 @@ This shell script helps create [Let's Encrypt][] certificates for [AWS Route53][
 Installation and Usage
 ----------------------
 
-1. Install Certbot and the AWS CLI. You can use [Homebrew][] (`brew install awscli certbot`) or [pip][] (`pip install boto3 certbot`).
+1. Install Certbot and the AWS CLI. You can use [Homebrew][] (`brew install awscli certbot`) or [pip][] (`pip install awscli certbot`).
 
 2. [Configure the AWS CLI][]. Your account must have permission to list and update Route53 records.
 
