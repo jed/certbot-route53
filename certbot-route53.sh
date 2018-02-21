@@ -19,7 +19,7 @@ if [ -z "${CERTBOT_DOMAIN}" ]; then
 else
   [[ ${CERTBOT_AUTH_OUTPUT} ]] && ACTION="DELETE" || ACTION="UPSERT"
 
-  printf -v QUERY 'HostedZones[?Name == `%s.`]|[?Config.PrivateZone != `false`].Id' "${CERTBOT_DOMAIN}"
+  printf -v QUERY 'HostedZones[?Name == `%s.`]|[?Config.PrivateZone == `false`].Id' "${CERTBOT_DOMAIN}"
 
   HOSTED_ZONE_ID="$(aws route53 list-hosted-zones --query "${QUERY}" --output text)"
 
@@ -28,7 +28,7 @@ else
     # We strip out the hostname part to leave only the domain
     DOMAIN="$(sed -r 's/^[^.]+.(.*)$/\1/' <<< "${CERTBOT_DOMAIN}")"
 
-    printf -v QUERY 'HostedZones[?Name == `%s.`]|[?Config.PrivateZone != `false`].Id' "${DOMAIN}"
+    printf -v QUERY 'HostedZones[?Name == `%s.`]|[?Config.PrivateZone == `false`].Id' "${DOMAIN}"
 
     HOSTED_ZONE_ID="$(aws route53 list-hosted-zones --query "${QUERY}" --output text)"
   fi
