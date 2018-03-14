@@ -1,6 +1,8 @@
 certbot-route53
 ===============
 
+**NOTE: If you're already using Route53, you're propbably better off using [AWS Certificate Manager](https://aws.amazon.com/certificate-manager/).**
+
 This shell script helps create [Let's Encrypt][] certificates for [AWS Route53][]. It uses [Certbot][] to automate certificate requests, and the [AWS CLI][] to automate DNS challenge record creation.
 
 Installation and Usage
