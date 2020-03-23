@@ -27,8 +27,8 @@ Installation and Usage
     sh certbot-route53.sh \
       --agree-tos \
       --manual-public-ip-logging-ok \
-      --domains jed.is,www.jed.is \
-      --email $(git config user.email)
+      --email $(git config user.email) \
+      --domains jed.is,www.jed.is
     ```
 
 5. Wait patiently (usually about two minutes) while, for each domain requested:
